@@ -1,0 +1,78 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  display: grid;
+  grid-template-rows: 10vh 1fr 4vh;
+  grid-template-areas: 
+  "header"
+  "content"
+  "footer";
+  background-color: white;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("../src/assets/background.jpg");
+  background-position: center;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header {
+  grid-area: header;
+  background-color: rgba(0, 0, 0, 0.692);
+  width: 100vw;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav {
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 3px;
+  color: white;
+  font-size: 1.35rem;
+  transition: all 0.2s ease-in-out;
+}
+
+a:hover {
+  text-decoration-color: white;
+}
+
+.content {
+  grid-area: content;
+}
+
+footer {
+  grid-area: footer;
+  background-color: rgb(14, 14, 14);
+  color: white;
+  text-align: center;
+  height: auto;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
